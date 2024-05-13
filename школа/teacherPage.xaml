@@ -1,0 +1,200 @@
+﻿<Page x:Class="школа.teacherPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:школа"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="teacher">
+
+    <Grid Background="White">
+
+
+
+
+        <TabControl Margin="0,0,0,-23" Grid.RowSpan="3">
+            <TabItem Header="Личный кабинет" FontSize="17" Background="#ff9c1a" Foreground="White">
+
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <Grid Background="#ffffe1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel>
+                            <Label Content=""/>
+                            <Label Content=""/>
+
+                            <Image x:Name="Avatarka" Source="Image/аватарка.png" Width="200" Height="200" Grid.Column="0"/>
+                            <Label Content=""/>
+                            <Button Height="24" Width="200" Content="Изменить аватарку"  FontSize="17" Background="#ff9c1a" Grid.Column="0" Foreground="White" Click="Button_Click_Avatarka" Panel.ZIndex="2">
+                                <Button.Resources>
+                                    <Style TargetType="Border">
+                                        <Setter Property="CornerRadius" Value="15"/>
+                                    </Style>
+                                </Button.Resources>
+                            </Button>
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="1">
+                            <Label Content="Фамилия"/>
+                            <TextBox x:Name="TxbSurname" Width="490" HorizontalAlignment="Left" />
+                            <Label Content="Имя"/>
+                            <TextBox x:Name="TxbName" Width="490" HorizontalAlignment="Left" />
+                            <Label Content="Отчетсво"/>
+                            <TextBox x:Name="TxbLastname" Width="490" HorizontalAlignment="Left" />
+                            <Label Content="Предмет"/>
+                            <TextBox x:Name="TxbItem" Width="490" HorizontalAlignment="Left" />
+                            <Label Content="Стаж"/>
+                            <TextBox x:Name="TxbExperience" Width="490" HorizontalAlignment="Left" />
+                            <Label Content="Логин"/>
+                            <TextBox x:Name="TxbLogin" Width="490" HorizontalAlignment="Left" />
+                            <Label Content="Пароль"/>
+                            <TextBox x:Name="TxbPassword" Width="490" HorizontalAlignment="Left" />
+                            <Label Content=""/>
+                            <Button Height="24" Width="200" Content="Сохранить изменения"  FontSize="17" Background="#ff9c1a" Grid.Column="0" Foreground="White" Click="Button_Click_Save" Panel.ZIndex="2">
+                                <Button.Resources>
+                                    <Style TargetType="Border">
+                                        <Setter Property="CornerRadius" Value="15"/>
+                                    </Style>
+                                </Button.Resources>
+                            </Button>
+
+                        </StackPanel>
+
+
+
+
+
+
+                    </Grid>
+                </ScrollViewer>
+            </TabItem>
+
+
+
+
+
+            <TabItem Header="Добавить д\з" FontSize="17" Background="#ff9c1a" Foreground="White">
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <Grid Background="#ffffe1">
+                        <Grid.ColumnDefinitions>
+
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid Margin="50,50,50,50" Grid.ColumnSpan="3" VerticalAlignment="Center">
+
+
+                            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,-43,0,0">
+                                <Label Content="Добавьте домашнее задание:" Panel.ZIndex="1" FontSize="17"/>
+                                <Label Content="Дата:" Panel.ZIndex="1" FontSize="17"></Label>
+                                <DatePicker x:Name="Date" Height="30" Width="250" Grid.Row="0" HorizontalAlignment="Center"></DatePicker>
+
+                                <Label Content="Предмет:" Panel.ZIndex="1" FontSize="17" Grid.Row="1"></Label>
+                                <TextBox  x:Name ="Txb_Item" Height="20" Width="250" Grid.Row="1" HorizontalAlignment="Center"></TextBox>
+
+                                <Label Content="Задание:" Panel.ZIndex="1" FontSize="17" Grid.Row="2"></Label>
+                                <TextBox  x:Name="TxbHome_Work" Height="20" Width="250" Grid.Row="2" HorizontalAlignment="Center"></TextBox>
+
+                                <Label Content="Название класса:" Panel.ZIndex="1" FontSize="17" Grid.Row="2"></Label>
+                                <TextBox  x:Name="TxbClass" Height="20" Width="250" Grid.Row="2" HorizontalAlignment="Center"></TextBox>
+
+
+
+                                <Label Content="" Panel.ZIndex="1" FontSize="17"/>
+                                <Button Width="192" Content="Добавить д\з"  HorizontalAlignment="Center" FontSize="17" Click="BtnRegister_Click" Background="#ff9c1a" Grid.Row="7" Height="38" VerticalAlignment="Top"/>
+
+                            </StackPanel>
+                        </Grid>
+                    </Grid>
+                </ScrollViewer>
+            </TabItem>
+            <TabItem Header="Выставить оценки" FontSize="17" Background="#ff9c1a" Foreground="White">
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <Grid Background="#ffffe1">
+                        <Grid.ColumnDefinitions>
+
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid Margin="50,50,50,50" Grid.ColumnSpan="3" VerticalAlignment="Center">
+
+
+                            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,-43,0,0">
+                                <Label Content="Поставьте оценки:" Panel.ZIndex="1" FontSize="17"/>
+                                <Label Content="Дата:" Panel.ZIndex="1" FontSize="17"></Label>
+                                <DatePicker x:Name="Date_" Height="30" Width="250" Grid.Row="0" HorizontalAlignment="Center"></DatePicker>
+
+                                <Label Content="Предмет:" Panel.ZIndex="1" FontSize="17" Grid.Row="1"></Label>
+                                <TextBox  x:Name ="Txb__Item" Height="20" Width="250" Grid.Row="1" HorizontalAlignment="Center"></TextBox>
+
+                                <Label Content="Оценка:" Panel.ZIndex="1" FontSize="17" Grid.Row="2"></Label>
+                                <TextBox  x:Name="TxbGrade" Height="20" Width="250" Grid.Row="2" HorizontalAlignment="Center"></TextBox>
+
+                                <Label Content="ФИО ученика:" Panel.ZIndex="1" FontSize="17" Grid.Row="2"></Label>
+                                <TextBox  x:Name="TxbFIO" Height="20" Width="250" Grid.Row="2" HorizontalAlignment="Center"></TextBox>
+
+                                <Label Content="Название класса:" Panel.ZIndex="1" FontSize="17" Grid.Row="2"></Label>
+                                <TextBox  x:Name="Txb_class" Height="20" Width="250" Grid.Row="2" HorizontalAlignment="Center"></TextBox>
+
+
+                                <Label Content="" Panel.ZIndex="1" FontSize="17"/>
+                                <Button Width="192" Content="Поставить оценку"  HorizontalAlignment="Center" FontSize="17" Click="BtnRegister_Click" Background="#ff9c1a" Grid.Row="7" Height="38" VerticalAlignment="Top"/>
+
+                            </StackPanel>
+                        </Grid>
+                    </Grid>
+                </ScrollViewer>
+            </TabItem>
+            <TabItem Header="Выставить посещаемость" FontSize="17" Background="#ff9c1e" Foreground="White">
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <Grid Background="#ffffe1">
+                        <Grid.ColumnDefinitions>
+
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid Margin="50,50,50,50" Grid.ColumnSpan="3" VerticalAlignment="Center">
+
+
+                            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,-43,0,0">
+                                <Label Content="Поставьте оценки:" Panel.ZIndex="1" FontSize="17"/>
+                                <Label Content="Дата:" Panel.ZIndex="1" FontSize="17"></Label>
+                                <DatePicker  x:Name="Date__" Height="30" Width="250" Grid.Row="0" HorizontalAlignment="Center"></DatePicker>
+
+                                <Label Content="Прична:" Panel.ZIndex="1" FontSize="17" Grid.Row="2"></Label>
+                                <TextBox  x:Name="TxbCause" Height="20" Width="250" Grid.Row="2" HorizontalAlignment="Center"></TextBox>
+
+                                <Label Content="ФИО ученика:" Panel.ZIndex="1" FontSize="17" Grid.Row="2"></Label>
+                                <TextBox  x:Name="Txb_FIO" Height="20" Width="250" Grid.Row="2" HorizontalAlignment="Center"></TextBox>
+
+                                <Label Content="Название класса:" Panel.ZIndex="1" FontSize="17" Grid.Row="2"></Label>
+                                <TextBox  x:Name="Txb__class" Height="20" Width="250" Grid.Row="2" HorizontalAlignment="Center"></TextBox>
+
+
+
+                                <Label Content="" Panel.ZIndex="1" FontSize="17"/>
+                                <Button Width="192" Content="Поставить пропуск"  HorizontalAlignment="Center" FontSize="17" Click="BtnRegister_Click" Background="#ff9c1a" Grid.Row="7" Height="38" VerticalAlignment="Top"/>
+
+                            </StackPanel>
+                        </Grid>
+                    </Grid>
+                </ScrollViewer>
+            </TabItem>
+
+
+
+
+        </TabControl>
+        <Button Height="24" Width="68" Content="Выйти" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,0,425" FontSize="17" Background="#ff9c1a" Foreground="White" Click="Click" Panel.ZIndex="2">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+    </Grid>
+</Page>

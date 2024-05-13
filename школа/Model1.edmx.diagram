@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="193cba40034544d285d0048b0cdbf822" Name="Diagram1">
+        <EntityTypeShape EntityType="schoolModel.account" Width="1.5" PointX="0.75" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="schoolModel.administrator" Width="1.5" PointX="3" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="schoolModel.assessment" Width="1.5" PointX="6" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="schoolModel.assessmentForStudent" Width="1.5" PointX="8.25" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="schoolModel.attendance" Width="1.5" PointX="6" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="schoolModel.attendancesForStudent" Width="1.5" PointX="8.25" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="schoolModel.class" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="schoolModel.classesForTeacher" Width="1.5" PointX="5.25" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="schoolModel.director" Width="1.5" PointX="3" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="schoolModel.homework" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="schoolModel.student" Width="1.5" PointX="6" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="schoolModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="schoolModel.teacher" Width="1.5" PointX="3" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="schoolModel.timetable" Width="1.5" PointX="6" PointY="15.625" IsExpanded="true" />
+        <AssociationConnector Association="schoolModel.FK_administrator_account" ManuallyRouted="false" />
+        <AssociationConnector Association="schoolModel.FK_director_account" ManuallyRouted="false" />
+        <AssociationConnector Association="schoolModel.FK_student_account" ManuallyRouted="false" />
+        <AssociationConnector Association="schoolModel.FK_teacher_account" ManuallyRouted="false" />
+        <AssociationConnector Association="schoolModel.FK_assessmentForStudent_assessment" ManuallyRouted="false" />
+        <AssociationConnector Association="schoolModel.FK_assessmentForStudent_student" ManuallyRouted="false" />
+        <AssociationConnector Association="schoolModel.FK_attendancesForStudent_attendance" ManuallyRouted="false" />
+        <AssociationConnector Association="schoolModel.FK_attendancesForStudent_student" ManuallyRouted="false" />
+        <AssociationConnector Association="schoolModel.FK_classesForTeacher_class" ManuallyRouted="false" />
+        <AssociationConnector Association="schoolModel.FK_homework_class" ManuallyRouted="false" />
+        <AssociationConnector Association="schoolModel.FK_student_class" ManuallyRouted="false" />
+        <AssociationConnector Association="schoolModel.FK_timetable_class" ManuallyRouted="false" />
+        <AssociationConnector Association="schoolModel.FK_classesForTeacher_teacher" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
